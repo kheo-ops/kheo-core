@@ -1,6 +1,5 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
+.git
+kheo-api/.project
+kheo-api/.settings
+kheo-api/.classpath
+kheo-api/target
