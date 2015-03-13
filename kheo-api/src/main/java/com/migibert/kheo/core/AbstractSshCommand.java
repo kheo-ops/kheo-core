@@ -28,7 +28,7 @@ public abstract class AbstractSshCommand<T> implements SshCommand<T> {
     public String execute(Server target, String command) throws IOException {
         if (target.sudo) {
             logger.info("Executing remote command with sudo flag");
-            command = "echo " + target.password + " | sudo -kS " + command;
+            command = "echo '" + target.password + "' | sudo -kS " + command;
         }
         return SshClient.execute(target, command);
     }
