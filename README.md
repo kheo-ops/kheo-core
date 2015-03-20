@@ -1,6 +1,6 @@
 # kheo
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
-[![Circle CI](https://circleci.com/gh/migibert/kheo-core/tree/master.svg?style=shield)](https://circleci.com/gh/migibert/kheo-core)
+[![Circle CI](https://circleci.com/gh/kheo-ops/kheo-core/tree/master.svg?style=shield)](https://circleci.com/gh/kheo-ops/kheo-core)
 
 ## Overview
 Kheo is an agentless application dedicated to servers management, including softwares inventory, os and network informations. It performs connections in background in order to generate events that represent changes on servers (differences since the last connection).
