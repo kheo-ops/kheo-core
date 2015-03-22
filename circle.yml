@@ -6,9 +6,9 @@ dependencies:
   pre:
     - cd kheo-api && mvn clean package && cd ..
     - docker pull stephens/sshd
+    - gem install bundler
   post:
-    - gem install cucumber
-    - gem install httparty
+    - cd kheo-test && bundle install && cd ..
 
 test:
   pre:
