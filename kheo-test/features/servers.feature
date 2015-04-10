@@ -14,6 +14,10 @@ Feature: Manage servers
         Given A server "non_connectable_server" with access disabled to "root" with "password" on port "22"
         When I add a "non_connectable_server" server with user "root" and password "password" on port "22"
         Then I can retrieve the server "non_connectable_server"
+        And state is "REGISTERED"
+        And user is "root"
+        And password is "password"
+        And port is "22"
 
     Scenario: As a user, I can remove an existing server
         Given An existing server "server_to_remove"
@@ -30,7 +34,8 @@ Feature: Manage servers
         Given An existing server "server_to_update"
         When I update "server_to_update" with user "test_user" and password "test_password"
         Then I retrieve the server "server_to_update"
-        And "server_to_update" user is "test_user" and password is "test_password"
+        And "server_to_update" user is "test_user"
+        And password is "test_password"
 
     Scenario: As a user, I cannot update a non existing server
         Given A non existing server "server_to_update_2"
